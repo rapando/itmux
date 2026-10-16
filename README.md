@@ -31,7 +31,7 @@ The session pill and a label on the right change with the mode:
 1. Put this folder in your tmux config folder, at `~/.config/tmux/itmux`:
 
    ```sh
-   git clone <repo-url> ~/.config/tmux/itmux
+   git clone https://github.com/rapando/itmux.git ~/.config/tmux/itmux
    ```
 
    Or copy the folder there. The theme finds its `scripts/` folder relative to `itmux.tmux`, so another location also works if you change the paths below to match.
