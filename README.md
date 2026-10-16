@@ -2,14 +2,12 @@
 
 A flat, rounded dark theme for tmux, with a key menu that lists every binding.
 
-```
- itmux  1 dots  2 code  3 server ●       main │  ~/code/itmux │  25%  12:25 Fri 16 Oct
-```
+![itmux with three panes: nvim, a dev server and a shell](docs/screenshots/overview.png)
 
 ## Features
 
 - **Session pill** that changes colour with the mode: blue normally, amber after the prefix, violet in copy mode.
-- **Window list** with the current window highlighted. `●` marks activity in a background window and `` marks a zoomed pane.
+- **Window list** with the current window highlighted. `•` marks activity in a background window and `` marks a zoomed pane.
 - **Mode labels** (PREFIX, COPY, SYNC) that only appear while that mode is on.
 - **Git branch** of the active pane's folder, hidden outside a repository.
 - **Current folder**, with your home folder shortened to `~`.
@@ -17,6 +15,10 @@ A flat, rounded dark theme for tmux, with a key menu that lists every binding.
 - **Clock** with the date.
 - **Pane titles** on each pane's top border. The active pane's border uses the mode colour, and all borders turn coral while panes are synced.
 - **Key menu** on `prefix` + `Space`.
+
+The session pill and a label on the right change with the mode:
+
+![The status bar in normal, prefix, copy and synced-pane modes](docs/screenshots/modes.png)
 
 ## Requirements
 
@@ -26,24 +28,24 @@ A flat, rounded dark theme for tmux, with a key menu that lists every binding.
 
 ## Installation
 
-1. Put this folder somewhere permanent. The examples below use `~/code/itmux`:
+1. Put this folder in your tmux config folder, at `~/.config/tmux/itmux`:
 
    ```sh
-   git clone <repo-url> ~/code/itmux
+   git clone <repo-url> ~/.config/tmux/itmux
    ```
 
-   Or copy the folder there. The theme finds its `scripts/` folder relative to `itmux.tmux`, so any location works.
+   Or copy the folder there. The theme finds its `scripts/` folder relative to `itmux.tmux`, so another location also works if you change the paths below to match.
 
 2. Make sure the scripts can run:
 
    ```sh
-   chmod +x ~/code/itmux/scripts/*.sh
+   chmod +x ~/.config/tmux/itmux/scripts/*.sh
    ```
 
-3. Add this line to your tmux config (`~/.config/tmux/tmux.conf` or `~/.tmux.conf`):
+3. Add this line to your tmux config, `~/.config/tmux/tmux.conf`:
 
    ```tmux
-   source-file ~/code/itmux/itmux.tmux
+   source-file ~/.config/tmux/itmux/itmux.tmux
    ```
 
    If you use TPM, put it above the `run '~/.tmux/plugins/tpm/tpm'` line.
@@ -61,6 +63,8 @@ A flat, rounded dark theme for tmux, with a key menu that lists every binding.
 ## Key menu
 
 Press `prefix` then `Space` to open the menu. Press an item's key to run it, or `Esc` to close.
+
+![The key menu, grouped into panes, windows and session](docs/screenshots/menu.png)
 
 | Group   | Action          | Key     |
 | ------- | --------------- | ------- |
@@ -93,7 +97,7 @@ To remove a status bar segment, delete its line from `status-right` in `itmux.tm
 
 ## Uninstalling
 
-Remove the `source-file ~/code/itmux/itmux.tmux` line from your tmux config, then restart tmux with `tmux kill-server`.
+Remove the `source-file ~/.config/tmux/itmux/itmux.tmux` line from your tmux config, delete `~/.config/tmux/itmux`, then restart tmux with `tmux kill-server`.
 
 ## Files
 

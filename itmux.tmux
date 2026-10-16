@@ -1,7 +1,7 @@
 # itmux: a flat, rounded dark theme for tmux (tested with 3.7)
 #
 # Load it from ~/.config/tmux/tmux.conf with:
-#   source-file ~/code/itmux/itmux.tmux
+#   source-file ~/.config/tmux/itmux/itmux.tmux
 #
 # Needs a Nerd Font (e.g. Iosevka Nerd Font) for the icons and rounded caps.
 
@@ -46,7 +46,7 @@ setw -g window-status-bell-style "none"
 
 setw -g window-status-format " #[fg=#3a4050]#I #[fg=#6b7387]#W\
 #{?window_zoomed_flag, #[fg=#7fd4d8],}\
-#{?window_bell_flag, #[fg=#f07a6a]●,#{?window_activity_flag, #[fg=#f0b866]●,}} "
+#{?window_bell_flag, #[fg=#f07a6a]•,#{?window_activity_flag, #[fg=#f0b866]•,}} "
 
 setw -g window-status-current-format "#[fg=#2a2f3c bg=#1f232d]\
 #[fg=#8aa4ff bg=#2a2f3c bold]#I #[fg=#c8cedb]#W\
