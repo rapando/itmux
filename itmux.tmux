@@ -1,4 +1,4 @@
-# itmux: a flat, rounded dark theme for tmux 3.4+
+# itmux: a flat, rounded dark theme for tmux (tested with 3.7)
 #
 # Load it from ~/.config/tmux/tmux.conf with:
 #   source-file ~/code/itmux/itmux.tmux
